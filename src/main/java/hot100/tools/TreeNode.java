@@ -24,8 +24,8 @@ public class TreeNode {
         }
         for(int i = 0 ; i < nodes.length/2 ; i++){
             if(nodes[i] == null) continue;
-            if(nodes[i*2] != null) nodes[i].left = nodes[i*2];
-            if(nodes[i*2+1] != null) nodes[i].right = nodes[i*2+1];
+            if(nodes[(i+1)*2 - 1] != null) nodes[i].left = nodes[(i+1)*2 - 1];
+            if(nodes[(i+1)*2] != null) nodes[i].right = nodes[(i+1)*2];
         }
         return nodes[0];
     }
