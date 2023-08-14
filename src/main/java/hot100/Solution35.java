@@ -1,6 +1,11 @@
 package hot100;
 
 public class Solution35 {
+
+    public static void main(String[] args) {
+        new Solution35().searchInsert(new int[]{1,3}, 2);
+    }
+
     public int searchInsert(int[] nums, int target) {
         return handle(nums, target, 0 ,nums.length -1 );
     }
@@ -10,7 +15,7 @@ public class Solution35 {
         int mid = (begin + end)/2;
         if(nums[mid] == target) return mid;
         if(nums[mid] > target){
-            if(begin == mid) return begin != 0 ? begin-1 : 0;
+            if(begin == mid) return begin;
 
             return handle(nums, target, begin, mid-1);
         }
